@@ -8,5 +8,6 @@ class Post < ActiveRecord::Base
   def clickbait?
     if !self.title.match(/Won't Believe|Secret|Top [\d*]|Guess/)
       errors.add(:clickbait, "is not enticing enough")
+    end
   end
 end
