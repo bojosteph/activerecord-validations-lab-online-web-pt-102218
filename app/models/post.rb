@@ -6,5 +6,6 @@ class Post < ActiveRecord::Base
   validate :clickbait?
   
   def clickbait?
+    if self.title
   end
 end
