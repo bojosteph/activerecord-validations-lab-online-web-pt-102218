@@ -6,8 +6,8 @@ class Post < ActiveRecord::Base
   validate :clickbait?
   
   def clickbait?
-    if !self.title.match(/Won't Believe|Secret|Top [\d*]|Guess/)
-      errors.add(:clickbait, "not sufficiently clickbait-y")
+    if self.title && !self.title.match(/Won't Believe|Secret|Top [\d*]|Guess/)
+      errors.add(:clickbait, "not )
     end
   end
 end
